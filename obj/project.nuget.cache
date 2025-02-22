@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7j2a8JaRAoo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saber\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\saber\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
