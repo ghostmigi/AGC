@@ -31,13 +31,11 @@ public class ContactService
             throw new KeyNotFoundException("Contact not found.");
         }
 
-        // Check if the new email already exists in another contact
         if (_context.Contacts.Any(c => c.Email == updatedContact.Email && c.Id != id))
         {
             throw new InvalidOperationException("Email already exists.");
         }
 
-        // Update the contact fields
         existingContact.Name = updatedContact.Name;
         existingContact.Email = updatedContact.Email;
         existingContact.Phone = updatedContact.Phone;
