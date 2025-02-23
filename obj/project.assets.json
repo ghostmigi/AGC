@@ -6860,19 +6860,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samia\\.nuget\\packages\\": {}
+    "C:\\Users\\saber\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\.net-AGC.csproj",
+      "projectUniqueName": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj",
       "projectName": ".net-AGC",
-      "projectPath": "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\.net-AGC.csproj",
-      "packagesPath": "C:\\Users\\samia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\obj\\",
+      "projectPath": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj",
+      "packagesPath": "C:\\Users\\saber\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\samia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\saber\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
