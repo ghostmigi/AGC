@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations;
 
 public class Contact
 {
@@ -14,6 +13,7 @@ public class Contact
 
     public string? Phone { get; set; }
     public string? Address { get; set; }
+    public string? Age { get; set; }
     public string? City { get; set; }
     public string? Job { get; set; }
     public string? Department { get; set; }
