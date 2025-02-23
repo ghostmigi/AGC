@@ -15,7 +15,7 @@ public class ContactService
     {
         if (_context.Contacts.Any(c => c.Email == contact.Email))
         {
-            throw new InvalidOperationException("Email already exists.");
+            throw new InvalidOperationException("Email already exists!!!!");
         }
 
         _context.Contacts.Add(contact);
