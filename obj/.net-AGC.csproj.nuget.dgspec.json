@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj": {}
+    "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\.net-AGC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj": {
+    "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\.net-AGC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj",
+        "projectUniqueName": "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\.net-AGC.csproj",
         "projectName": ".net-AGC",
-        "projectPath": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\.net-AGC.csproj",
-        "packagesPath": "C:\\Users\\saber\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saber\\Documents\\GitHub\\.net-AGC\\obj\\",
+        "projectPath": "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\.net-AGC.csproj",
+        "packagesPath": "C:\\Users\\samia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\samia\\OneDrive\\Documents\\GitHub\\AGC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saber\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\samia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -59,6 +59,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
