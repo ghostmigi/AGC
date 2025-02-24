@@ -18,9 +18,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "My API",
+        Title = "Backend API",
         Version = "v1",
-        Description = "An example API to demonstrate Swagger integration"
+        Description = "API for AGN"
     });
 });
 
