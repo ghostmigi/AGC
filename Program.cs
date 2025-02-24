@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +14,28 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<ContactService>();
 builder.Services.AddScoped<UserService>();
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "My API",
+        Version = "v1",
+        Description = "An example API to demonstrate Swagger integration"
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API v1");
+        c.RoutePrefix = string.Empty; // Optional: Set Swagger UI to the root URL
+    });
+
     app.MapOpenApi();
 }
 

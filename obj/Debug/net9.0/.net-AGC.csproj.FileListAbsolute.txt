@@ -325,3 +325,6 @@ C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\runtimes\win\lib\net6.
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\BCrypt.Net.dll
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
