@@ -1,3 +1,4 @@
+using BCrypt.Net;
 public class UserService
 {
     private readonly AppDbContext _context;
@@ -17,6 +18,9 @@ public class UserService
         {
             throw new InvalidOperationException("User already exists!!!!");
         }
+
+        // Hash the password before saving the user
+        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
         _context.Users.Add(user);
         _context.SaveChanges();
@@ -39,7 +43,10 @@ public class UserService
         existingUser.FirstName = updatedUser.FirstName;
         existingUser.LastName = updatedUser.LastName;
         existingUser.Email = updatedUser.Email;
-        existingUser.Password = updatedUser.Password;
+        if (!string.IsNullOrEmpty(updatedUser.Password))
+        {
+            existingUser.Password = BCrypt.Net.BCrypt.HashPassword(updatedUser.Password);
+        }
 
         _context.SaveChanges();
     }
