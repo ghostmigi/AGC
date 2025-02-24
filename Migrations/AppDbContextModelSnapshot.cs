@@ -80,15 +80,12 @@ namespace _net_AGC.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Department")
-                        .HasColumnType("text");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)");
 
-                    b.Property<string>("FirtName")
+                    b.Property<string>("FirstName")
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
@@ -101,6 +98,9 @@ namespace _net_AGC.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

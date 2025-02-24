@@ -13,5 +13,9 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Contact>()
             .HasIndex(c => c.Email)
             .IsUnique();
+
+        modelBuilder.Entity<User>()
+           .HasIndex(c => c.Email)
+           .IsUnique();
     }
 }

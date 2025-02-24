@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 public class User
 {
     public int Id { get; set; }
-    public string? FirtName { get; set; }
+    public string? FirstName { get; set; }
     public string? LastName { get; set; }
 
     [Required]
@@ -13,7 +13,6 @@ public class User
     public string? Email { get; set; }
 
     public string? Password { get; set; }
-    public string? Department { get; set; }
 
     [Required]
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
