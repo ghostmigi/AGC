@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -12,9 +13,11 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public IActionResult GetAllUsers() => Ok(_userService.GetAllUsers());
 
     [HttpGet("{id}")]
+    [Authorize]
     public IActionResult GetUser(int id)
     {
         var user = _userService.GetUserById(id);
@@ -29,6 +32,7 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize]
     public IActionResult UpdateUser(int id, [FromBody] User updatedUser)
     {
         try
@@ -48,6 +52,7 @@ public class UserController : ControllerBase
 
 
     [HttpDelete("{id}")]
+    [Authorize]
     public IActionResult DeleteUser(int id)
     {
         _userService.DeleteUser(id);

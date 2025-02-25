@@ -328,3 +328,4 @@ C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\BCrypt.Net.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,8 +1,30 @@
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
+using System.Text;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add jwt service
+var key = builder.Configuration["Jwt:Key"];
+var issuer = builder.Configuration["Jwt:Issuer"];
+var audience = builder.Configuration["Jwt:Audience"];
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = issuer,
+            ValidAudience = audience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key))
+        };
+    });
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -13,6 +35,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<ContactService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<AuthService>();
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -60,6 +83,7 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast");
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
