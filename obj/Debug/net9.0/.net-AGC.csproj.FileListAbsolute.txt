@@ -329,3 +329,6 @@ C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\front-end\package-lock.json
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\front-end\package.json
+C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\front-end\public\manifest.json
