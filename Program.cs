@@ -37,6 +37,19 @@ builder.Services.AddScoped<ContactService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<AuthService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials();
+        });
+});
+
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
@@ -108,6 +121,7 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+app.UseCors("AllowReactApp");
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

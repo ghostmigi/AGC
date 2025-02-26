@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute(".net-AGC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9f434c4bd5d2ea44e3a30c9574e9e6a81cd6c56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e99fad4e324be05ad179faef094520608d05584")]
 [assembly: System.Reflection.AssemblyProductAttribute(".net-AGC")]
 [assembly: System.Reflection.AssemblyTitleAttribute(".net-AGC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
