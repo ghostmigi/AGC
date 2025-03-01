@@ -27,12 +27,12 @@ const AddContact = () => {
     e.preventDefault();
 
     const endpoint = "http://localhost:5000/api/Contact";
-    const token = localStorage.getItem("authToken"); // Retrieve the token
+    const token = localStorage.getItem("authToken");
 
     try {
       const response = await axios.post(endpoint, formData, {
         headers: {
-          Authorization: `Bearer ${token}`, // Include the token in headers
+          Authorization: `Bearer ${token}`,
         },
       });
 
