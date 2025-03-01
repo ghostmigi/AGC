@@ -332,3 +332,11 @@ C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\Microsoft.AspNetCore.A
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\front-end\package-lock.json
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\front-end\package.json
 C:\Users\saber\Documents\GitHub\.net-AGC\bin\Debug\net9.0\front-end\public\manifest.json
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\front-end\public\manifest.json
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\front-end\package-lock.json
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\front-end\package.json
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\BCrypt.Net.dll
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\samia\OneDrive\Documents\GitHub\AGC\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
