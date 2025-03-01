@@ -24,7 +24,7 @@ public class UserController : ControllerBase
         return user != null ? Ok(user) : NotFound();
     }
 
-    [HttpPost]
+    [HttpPost]  
     public IActionResult CreateUser(User user)
     {
         _userService.CreateUser(user);

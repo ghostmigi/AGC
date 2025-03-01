@@ -3,12 +3,12 @@ import React from "react";
 import Signup from "./auth/Signup";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Signin from "./auth/Signin";
-import Dashboard from "./dashboard/Dashboard";
 import PrivateRoute from "./auth/PrivateRoute";
 import PublicRoute from "./auth/PublicRoute";
 import Terms from "./terms/Terms";
 import Layout from "./sidebar/layout";
 import Contact from "./contact/Contact";
+import AddContact from "./contact/AddContact";
 
 function App() {
   return (
@@ -21,6 +21,18 @@ function App() {
               element={
                 <Layout>
                   <Contact />
+                </Layout>
+              }
+            />
+          }
+        />
+        <Route
+          path="/addcontact"
+          element={
+            <PrivateRoute
+              element={
+                <Layout>
+                  <AddContact />
                 </Layout>
               }
             />

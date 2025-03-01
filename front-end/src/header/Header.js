@@ -8,25 +8,16 @@ import {
   MenuItem,
   Typography,
   Avatar,
-  Badge,
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
-import {
-  Menu as MenuIcon,
-  Notifications as NotificationsIcon,
-  Person as PersonIcon,
-  Logout as LogoutIcon,
-} from "@mui/icons-material";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { Menu as MenuIcon, Logout as LogoutIcon } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [notificationAnchorEl, setNotificationAnchorEl] = useState(null);
   const [user, setUser] = useState(null);
-  const [notifications, setNotifications] = useState([]);
-  const [pollingInterval, setPollingInterval] = useState(5000);
   const navigate = useNavigate();
 
   const handleMenuClick = (event) => {
@@ -39,15 +30,9 @@ const Header = () => {
   };
 
   const handleLogout = () => {
-    // Remove the token from localStorage
     localStorage.removeItem("authToken");
-
-    // Optionally, you can reset the user state if needed
     setUser(null);
-
-    // Redirect to the sign-in page
     navigate("/auth/signin");
-
     handleMenuClose();
   };
 
@@ -56,7 +41,7 @@ const Header = () => {
     if (token) {
       try {
         const decodedToken = jwtDecode(token);
-        setUser(decodedToken); // Set the decoded token to the user state
+        setUser(decodedToken);
       } catch (error) {
         console.error("Failed to decode token:", error);
       }

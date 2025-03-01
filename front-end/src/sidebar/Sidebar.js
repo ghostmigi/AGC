@@ -14,9 +14,6 @@ import {
   useTheme,
 } from "@mui/material";
 import {
-  Home,
-  AdminPanelSettings,
-  SupervisorAccount,
   Menu as MenuIcon,
   Close as CloseIcon,
 } from "@mui/icons-material";
