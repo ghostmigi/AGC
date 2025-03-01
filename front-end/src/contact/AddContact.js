@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import {
+  Container,
+  Box,
+  Typography,
+  TextField,
+  Button,
+  Paper,
+} from "@mui/material";
 
 const AddContact = () => {
   const navigate = useNavigate();
@@ -45,68 +53,53 @@ const AddContact = () => {
   };
 
   return (
-    <div>
-      <h1>Add Contact</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="Name"
-          placeholder="Name"
-          value={formData.Name}
-          onChange={handleChange}
-        />
-        <input
-          type="email"
-          name="Email"
-          placeholder="Email"
-          value={formData.Email}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="Phone"
-          placeholder="Phone"
-          value={formData.Phone}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="Address"
-          placeholder="Address"
-          value={formData.Address}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="Age"
-          placeholder="Age"
-          value={formData.Age}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="City"
-          placeholder="City"
-          value={formData.City}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="Job"
-          placeholder="Job"
-          value={formData.Job}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="Department"
-          placeholder="Department"
-          value={formData.Department}
-          onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <Container
+      maxWidth="sm"
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+        background: "linear-gradient(to right, #2196F3, #9C27B0)",
+      }}
+    >
+      <Paper elevation={6} sx={{ padding: 4, borderRadius: 3, width: "100%" }}>
+        <Typography
+          variant="h5"
+          align="center"
+          fontWeight="bold"
+          color="primary"
+          gutterBottom
+        >
+          Add Contact
+        </Typography>
+        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
+          {["Name", "Email", "Phone", "Address", "Age", "City", "Job", "Department"].map(
+            (field) => (
+              <TextField
+                key={field}
+                label={field}
+                name={field}
+                value={formData[field]}
+                onChange={handleChange}
+                fullWidth
+                margin="normal"
+                variant="outlined"
+              />
+            )
+          )}
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            sx={{ mt: 2, py: 1.5, fontSize: "1rem", borderRadius: 2 }}
+          >
+            Save Contact
+          </Button>
+        </Box>
+      </Paper>
+    </Container>
   );
 };
 
