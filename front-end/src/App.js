@@ -9,6 +9,8 @@ import Terms from "./terms/Terms";
 import Layout from "./sidebar/layout";
 import Contact from "./contact/Contact";
 import AddContact from "./contact/AddContact";
+import UpdateContact from "./contact/UpdateContact";
+
 
 function App() {
   return (
@@ -33,6 +35,18 @@ function App() {
               element={
                 <Layout>
                   <AddContact />
+                </Layout>
+              }
+            />
+          }
+        />
+        <Route
+          path="/updatecontact/:id"
+          element={
+            <PrivateRoute
+              element={
+                <Layout>
+                  <UpdateContact />
                 </Layout>
               }
             />

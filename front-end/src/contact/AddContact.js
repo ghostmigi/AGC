@@ -71,7 +71,7 @@ const AddContact = () => {
           color="primary"
           gutterBottom
         >
-          Add Contact
+          Create new contact
         </Typography>
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
           {["Name", "Email", "Phone", "Address", "Age", "City", "Job", "Department"].map(
