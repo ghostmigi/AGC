@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Container,
   Typography,
@@ -13,6 +14,7 @@ import {
   TableCell,
   TableRow,
   IconButton,
+  Button,
 } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -56,6 +58,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const Contacts = () => {
+  const navigate = useNavigate();
   const [contacts, setContacts] = useState([]);
   const [loading, setLoading] = useState(true);
   const token = localStorage.getItem("authToken");
@@ -115,6 +118,14 @@ const Contacts = () => {
     return <Spinner color="primary">Loading...</Spinner>;
   }
 
+
+  const handleEdit = (id) => {
+    navigate(`/updatecontact/${id}`);
+  };
+
+  
+
+
   return (
     <Container maxWidth="lg" sx={{ mt: 4 }}>
       <Card sx={{ boxShadow: 3 }}>
@@ -122,7 +133,9 @@ const Contacts = () => {
           <Typography variant="h4" gutterBottom sx={{ color: "#15b79e" }}>
             Contacts List
           </Typography>
-
+          <Button component={Link} to="/addcontact" variant="contained" color="primary">
+             Add Contact
+          </Button>
           <StyledTableContainer component={Paper} sx={{ mt: 3 }}>
             <Table>
               <TableHead>
@@ -158,7 +171,7 @@ const Contacts = () => {
                     <StyledTableCell>
                       <IconButton
                         color="primary"
-                        // onClick={() => handleEdit(contact.id)}
+                        onClick={() => handleEdit(contact.id)}
                       >
                         <EditIcon />
                       </IconButton>
